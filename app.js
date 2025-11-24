@@ -179,6 +179,21 @@ const promptOptions = {
         { id: 'texture', name: '質感', prompt: 'rich textures, tactile', description: '豐富紋理' },
         { id: 'glow', name: '光暈', prompt: 'glowing effect, luminous', description: '發光效果' },
         { id: 'atmospheric', name: '大氣感', prompt: 'atmospheric perspective, depth haze', description: '空氣透視' }
+    ],
+
+    aspectRatio: [
+        { id: 'instagram-story', name: 'IG 限動', prompt: '9:16 aspect ratio, vertical format', description: '1080x1920' },
+        { id: 'instagram-post', name: 'IG 貼文', prompt: '1:1 aspect ratio, square format', description: '1080x1080' },
+        { id: 'instagram-landscape', name: 'IG 橫式', prompt: '4:5 aspect ratio, portrait format', description: '1080x1350' },
+        { id: 'widescreen', name: '16:9 寬螢幕', prompt: '16:9 aspect ratio, widescreen format', description: '1920x1080' },
+        { id: 'ultrawide', name: '21:9 超寬', prompt: '21:9 aspect ratio, ultrawide format', description: '2560x1080' },
+        { id: 'square', name: '1:1 正方形', prompt: '1:1 aspect ratio, square format', description: '1024x1024' },
+        { id: 'portrait', name: '2:3 直式', prompt: '2:3 aspect ratio, portrait format', description: '1365x2048' },
+        { id: 'landscape', name: '3:2 橫式', prompt: '3:2 aspect ratio, landscape format', description: '2048x1365' },
+        { id: 'cinema', name: '2.39:1 電影', prompt: '2.39:1 aspect ratio, cinematic format', description: '2048x858' },
+        { id: 'youtube', name: 'YouTube', prompt: '16:9 aspect ratio, YouTube standard', description: '1920x1080' },
+        { id: 'tiktok', name: 'TikTok', prompt: '9:16 aspect ratio, vertical video', description: '1080x1920' },
+        { id: 'twitter', name: 'Twitter', prompt: '16:9 aspect ratio, Twitter card', description: '1200x675' }
     ]
 };
 
@@ -190,7 +205,8 @@ let selectedOptions = {
     lighting: [],
     mood: [],
     color: [],
-    detail: []
+    detail: [],
+    aspectRatio: []
 };
 
 // ==================== DOM 元素 ====================
