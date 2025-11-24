@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 繪圖提示詞生成器 | Gemini Nano Banana</title>
+    <meta name="description" content="專業的 AI 繪圖提示詞生成器，為 Gemini Nano Banana 創建高質量的圖像生成提示詞">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 標題區 -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="gradient-text">AI 繪圖提示詞生成器</span>
+                </h1>
+                <p class="subtitle">為 Gemini Nano Banana 創建專業的圖像生成提示詞</p>
+            </div>
+        </header>
+
+        <!-- 主要內容區 -->
+        <main class="main-content">
+            <!-- 選項選擇區 -->
+            <section class="options-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-category="style">
+                        <span class="tab-icon">🎨</span>
+                        <span>藝術風格</span>
+                    </button>
+                    <button class="tab-btn" data-category="camera">
+                        <span class="tab-icon">📷</span>
+                        <span>鏡頭角度</span>
+                    </button>
+                    <button class="tab-btn" data-category="composition">
+                        <span class="tab-icon">🖼️</span>
+                        <span>構圖方式</span>
+                    </button>
+                    <button class="tab-btn" data-category="lighting">
+                        <span class="tab-icon">💡</span>
+                        <span>光線效果</span>
+                    </button>
+                    <button class="tab-btn" data-category="mood">
+                        <span class="tab-icon">✨</span>
+                        <span>氛圍情緒</span>
+                    </button>
+                    <button class="tab-btn" data-category="color">
+                        <span class="tab-icon">🌈</span>
+                        <span>色調</span>
+                    </button>
+                    <button class="tab-btn" data-category="detail">
+                        <span class="tab-icon">🔍</span>
+                        <span>細節修飾</span>
+                    </button>
+                </div>
+
+                <!-- 選項卡片容器 -->
+                <div class="options-container">
+                    <!-- 藝術風格 -->
+                    <div class="option-group active" data-category="style">
+                        <div class="options-grid" id="style-options"></div>
+                    </div>
+
+                    <!-- 鏡頭角度 -->
+                    <div class="option-group" data-category="camera">
+                        <div class="options-grid" id="camera-options"></div>
+                    </div>
+
+                    <!-- 構圖方式 -->
+                    <div class="option-group" data-category="composition">
+                        <div class="options-grid" id="composition-options"></div>
+                    </div>
+
+                    <!-- 光線效果 -->
+                    <div class="option-group" data-category="lighting">
+                        <div class="options-grid" id="lighting-options"></div>
+                    </div>
+
+                    <!-- 氛圍情緒 -->
+                    <div class="option-group" data-category="mood">
+                        <div class="options-grid" id="mood-options"></div>
+                    </div>
+
+                    <!-- 色調 -->
+                    <div class="option-group" data-category="color">
+                        <div class="options-grid" id="color-options"></div>
+                    </div>
+
+                    <!-- 細節修飾 -->
+                    <div class="option-group" data-category="detail">
+                        <div class="options-grid" id="detail-options"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 提示詞預覽區 -->
+            <section class="preview-section">
+                <div class="preview-header">
+                    <h2 class="preview-title">生成的提示詞</h2>
+                    <div class="preview-actions">
+                        <button class="btn btn-secondary" id="clear-btn">
+                            <span>🗑️</span>
+                            <span>清除</span>
+                        </button>
+                        <button class="btn btn-primary" id="copy-btn">
+                            <span>📋</span>
+                            <span>複製</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="preview-box">
+                    <div class="preview-content" id="preview-content">
+                        <p class="preview-placeholder">請選擇選項來生成提示詞...</p>
+                    </div>
+                </div>
+                <div class="preview-info">
+                    <span class="info-badge" id="selection-count">已選擇: 0 項</span>
+                    <span class="info-badge" id="char-count">字數: 0</span>
+                </div>
+            </section>
+        </main>
+
+        <!-- 頁尾 -->
+        <footer class="footer">
+            <p>由 ❤️ 打造 | 專為 Gemini Nano Banana 優化</p>
+        </footer>
+    </div>
+
+    <!-- 複製成功提示 -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-text">提示詞已複製到剪貼板！</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
